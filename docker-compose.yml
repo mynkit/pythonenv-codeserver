@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  code-server:
+    build:
+      context: .
+      args:
+        - PASSWORD=$codeserv_password
+    container_name: code-server
+    tty: true
+    volumes:
+      - "${HOME}/.local/share/code-server:/home/coder/.local/share/code-server"
+      - "$PWD:/home/coder/project"
+      - "${HOME}/.ssh:${HOME}/.ssh"
+    working_dir: "/home/coder/project"
+    ports:
+      - "0.0.0.0:8080:8080"
