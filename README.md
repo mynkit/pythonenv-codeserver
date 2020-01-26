@@ -8,3 +8,4 @@ make run
 
 and access http://localhost:8080 or http://localhost:8080/?folder=/home/coder/project
 
+![code-serve](https://github.com/mynkit/pythonenv-codeserver/blob/master/assets/code-serve.png)
